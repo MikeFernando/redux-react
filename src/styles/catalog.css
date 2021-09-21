@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #1a1a1a;
+  color: aliceblue;
+}
+
+.container h1 {
+  color: blueviolet;
+  margin: 2rem 4rem;
+}
+
+.container .products {
+  margin: 1rem;
+  font-weight: 500;
+}
+
+.container .add-button {
+  padding: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  background-color: #9f82fd;
+  color: aliceblue;
+}
