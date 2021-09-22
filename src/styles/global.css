@@ -2,21 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: aliceblue;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:hover {
-  filter: brightness(0.8);
+  font: 75%/1.6 "Myriad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
 }
