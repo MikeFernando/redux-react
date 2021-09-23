@@ -4,7 +4,8 @@ import { Reducer } from "redux";
 import { ICartState } from "./types";
 
 const INITIAL_STATE: ICartState = {
-  items: []
+  items: [],
+  outStock: [],
 };
 
 const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
@@ -28,7 +29,7 @@ const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
         break;
       }
       case "ADD_PRODUCT_TO_FAILURE": {
-        console.log('failure', action.payload);
+        draft.outStock.push(action.payload.productId);
         break;
       }
       default:
