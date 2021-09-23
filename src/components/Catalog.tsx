@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 import api from "../services/api";
-
 import { IProduct } from "../store/modules/cart/types";
 
-import '../styles/catalog.css';
 import { Cart } from "./Cart";
 import { CatalogItem } from "./CatalogItem";
+
+import '../styles/catalog.css';
 
 export const Catalog = () => {
   const [ catalog, setCatalog ] = useState<IProduct[]>([]);
