@@ -3,9 +3,9 @@ import { AxiosResponse } from "axios";
 
 import api from "../../../services/api";
 import { IState } from "../..";
-import { addProductToFailure, addProductToSuccess } from "./action";
+import { addProductToCartFailure, addProductToCartRequest } from "./action";
 
-type checkProductStockProps = ReturnType<typeof addProductToSuccess>;
+type checkProductStockProps = ReturnType<typeof addProductToCartRequest>;
 
 interface StockResponse {
   id: number;
@@ -23,9 +23,9 @@ function* checkProductStock({ payload }: checkProductStockProps) {
     yield call(api.get, `stock/${product.id}`);
 
   if (availableStockResponse.data.quantity > currentyQuantity) {
-    yield put(addProductToSuccess(product))
+    yield put(addProductToCartRequest(product))
   } else {
-    yield put(addProductToFailure(product.id));
+    yield put(addProductToCartFailure(product.id));
   }
 }
 
