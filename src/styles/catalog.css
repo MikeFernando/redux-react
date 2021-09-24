@@ -33,3 +33,7 @@
 .products .add-button:hover {
   background-color: blueviolet;
 }
+
+.failed-stock {
+  color: red;
+}
